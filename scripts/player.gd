@@ -52,8 +52,8 @@ func _physics_process(delta: float) -> void:
 				motion.x = lerpf(motion.x, 0, 0.05)
 	
 	if Input.is_action_just_pressed("boost") and boosts_used < MAX_BOOSTS:
-		motion.x = -((get_local_mouse_position().x)) * SPEED/2 * delta
-		motion.y = -((get_local_mouse_position().y)) * SPEED/2 * delta
+		motion.x = -((get_local_mouse_position().x)) * SPEED * delta
+		motion.y = -((get_local_mouse_position().y)) * SPEED * delta
 		if motion.x > 500:
 			motion.x = 500
 		elif motion.x < -500:
@@ -73,5 +73,6 @@ func _physics_process(delta: float) -> void:
 		velocity = Vector2.ZERO
 	else:
 		set_process_input(true)
+	
 
 	move_and_slide()
