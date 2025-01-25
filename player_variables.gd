@@ -3,7 +3,7 @@ extends Node
 @onready var player: CharacterBody2D = $"../Player"
 
 
-var has_wand1: bool
+var has_boostwand: bool
 var has_wand2: bool
 var has_wand3: bool
 
@@ -14,3 +14,6 @@ func game_over():
 
 func add_point():
 	score += 1
+	
+func activate_boost_wand():
+	player.has_boost_wand = true

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dwe6sbtuetd7j"]
+
+[ext_resource type="Script" path="res://scripts/boost_wand.gd" id="1_i76qa"]
+
+[node name="BoostWand" type="Area2D"]
+script = ExtResource("1_i76qa")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
