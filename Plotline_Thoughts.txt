@@ -26,3 +26,10 @@ Music Ideas:
 
 - https://youtu.be/taAxpw03dgM?si=An2VFsKiYmdc2JwM
 * I really liked this song for the general music to be played throughout the game. It holds a more melancholy tune, which I think really drives the sad ambience forward, making it more impactful when the music changes.*
+(Credits::
+Song: Filaments
+Composer: Scott Buckley
+Website: https://youtube.com/user/musicbyscottb
+License: Creative Commons (BY 3.0) https://creativecommons.org/licenses/by/3.0/
+Music powered by BreakingCopyright: https://breakingcopyright.com
+)
