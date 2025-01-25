@@ -1,17 +1,10 @@
-[gd_scene load_steps=12 format=4 uid="uid://blwsgjh05o0mt"]
+[gd_scene load_steps=11 format=4 uid="uid://blwsgjh05o0mt"]
 
 [ext_resource type="PackedScene" uid="uid://0t2le1o3ilay" path="res://scenes/player.tscn" id="1_drejv"]
 [ext_resource type="Texture2D" uid="uid://djmbc23ev35os" path="res://levels/TileSets/tilesheet_complete.png" id="2_pj2gs"]
 [ext_resource type="Texture2D" uid="uid://bbww74gu3v31i" path="res://levels/TileSets/aliSet/straight_sand.png" id="2_y8b0x"]
 [ext_resource type="Texture2D" uid="uid://bbwfl4rvsurl8" path="res://levels/TileSets/aliSet/topLeftBotRight.png" id="4_0j8ch"]
 [ext_resource type="Texture2D" uid="uid://7lrii6naepep" path="res://levels/TileSets/aliSet/botLeftTopRight_sand.png" id="5_gktbu"]
-[ext_resource type="PackedScene" uid="uid://b0nqvbr1qqcfs" path="res://scenes/killzone.tscn" id="6_bht6w"]
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_urqtw"]
-texture = ExtResource("2_y8b0x")
-0:0/size_in_atlas = Vector2i(2, 2)
-0:0/0 = 0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vlglo"]
 texture = ExtResource("2_pj2gs")
@@ -3211,13 +3204,19 @@ texture = ExtResource("2_pj2gs")
 5:12/size_in_atlas = Vector2i(10, 1)
 5:12/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_00tvm"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dayx8"]
+texture = ExtResource("2_y8b0x")
+0:0/size_in_atlas = Vector2i(2, 2)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hdic8"]
 texture = ExtResource("4_0j8ch")
 0:0/size_in_atlas = Vector2i(2, 2)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 0, 0, 16, 16, -16, 16)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lghc4"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_itq0o"]
 texture = ExtResource("5_gktbu")
 0:0/size_in_atlas = Vector2i(2, 2)
 0:0/0 = 0
@@ -3227,17 +3226,14 @@ texture = ExtResource("5_gktbu")
 tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 1
 sources/1 = SubResource("TileSetAtlasSource_vlglo")
-sources/0 = SubResource("TileSetAtlasSource_urqtw")
-sources/2 = SubResource("TileSetAtlasSource_00tvm")
-sources/3 = SubResource("TileSetAtlasSource_lghc4")
+sources/4 = SubResource("TileSetAtlasSource_dayx8")
+sources/5 = SubResource("TileSetAtlasSource_hdic8")
+sources/6 = SubResource("TileSetAtlasSource_itq0o")
 
 [node name="IntroLevel" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_drejv")]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
-tile_map_data = PackedByteArray("AAAEAAEAAAAAAAAAAAAOAAEAAAAAAAAAAAD//wEAAAAAAAAAAAAAAAEAAAAAAAAAAAABAAEAAAAAAAAAAAACAAEAAAAAAAAAAAADAAEAAAAAAAAAAAAFAAEAAAAAAAAAAAAGAAEAAAAAAAAAAAAHAAEAAAAAAAAAAAAIAAEAAgAAAAAAAAAIAAIAAAAAAAAAAAAJAAIAAAAAAAAAAAAKAAIAAAAAAAAAAAALAAIAAAAAAAAAAAAMAAIAAAAAAAAAAAAMAAEAAwAAAAAAAAANAAEAAAAAAAAAAAAPAAEAAAAAAAAAAAAQAAEAAAAAAAAAAAARAAEAAwAAAAAAAFAUAAEAAwAAAAAAAAARAAIAAAAAAAAAAAARAAMAAAAAAAAAAAARAAQAAAAAAAAAAAARAAUAAAAAAAAAAAARAAYAAAAAAAAAAAAUAAIAAAAAAAAAAAAUAAMAAAAAAAAAAAAUAAQAAAAAAAAAAAAUAAUAAAAAAAAAAAAUAAYAAAAAAAAAAAA=")
+tile_map_data = PackedByteArray("AAAEAAEABAAAAAAAAAAOAAEABAAAAAAAAAD//wEABAAAAAAAAAAAAAEABAAAAAAAAAABAAEABAAAAAAAAAACAAEABAAAAAAAAAADAAEABAAAAAAAAAAFAAEABQAAAAAAAAAJAAEABgAAAAAAAAAFAAIABAAAAAAAAAAGAAIABAAAAAAAAAAHAAIABAAAAAAAAAAIAAIABAAAAAAAAAAJAAIABAAAAAAAAAAKAAEABAAAAAAAAAALAAEABAAAAAAAAAAMAAEABAAAAAAAAAANAAEABAAAAAAAAAAPAAEABAAAAAAAAAAQAAEABQAAAAAAAAATAAEABgAAAAAAAAAQAAIABAAAAAAAAAAQAAMABAAAAAAAAAAQAAQABAAAAAAAAAAQAAUABAAAAAAAAAAQAAYABAAAAAAAAAATAAIABAAAAAAAAAATAAMABAAAAAAAAAATAAQABAAAAAAAAAATAAUABAAAAAAAAAATAAYABAAAAAAAAAAUAAEABAAAAAAAAAAVAAEABAAAAAAAAAAWAAEABAAAAAAAAAAXAAEABAAAAAAAAAA=")
 tile_set = SubResource("TileSet_vmmm7")
-
-[node name="Killzone" parent="." instance=ExtResource("6_bht6w")]
-position = Vector2(-1, 0)
