@@ -25,6 +25,11 @@ func _physics_process(delta: float) -> void:
 		if not Input.is_action_pressed("move_right") and not Input.is_action_pressed("move_left"):
 			motion.x = lerpf(motion.x, 0, 0.45)
 		if Input.is_action_just_released("move_left") and Input.is_action_pressed("move_right"):
+			if motion.x < 0:
+				motion.x = lerpf(motion.x, 0, 0.45)
+		if Input.is_action_just_released("move_right") and Input.is_action_pressed("move_left"):
+			if motion.x > 0:
+				motion.x = lerpf(motion.x, 0, 0.45)
 			
 	
 	if Input.is_action_just_pressed("boost"):
