@@ -6,6 +6,8 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_l0man"]
 
 [node name="Player" type="CharacterBody2D"]
+floor_stop_on_slope = false
+floor_max_angle = 0.872665
 script = ExtResource("1_vh54j")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -14,3 +16,9 @@ shape = SubResource("CircleShape2D_l0man")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.162109, 0.162109)
 texture = ExtResource("2_ju5b3")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2(0, -40)
+zoom = Vector2(2, 2)
+position_smoothing_enabled = true
+position_smoothing_speed = 4.0
