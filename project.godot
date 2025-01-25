@@ -15,6 +15,11 @@ run/main_scene="res://scenes/demo.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+PlayerVariables="*res://player_variables.gd"
+Global="*res://global.gd"
+
 [dotnet]
 
 project/assembly_name="bubble_jam"
