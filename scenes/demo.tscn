@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://0t2le1o3ilay" path="res://scenes/player.tscn" id="1_si7vq"]
 [ext_resource type="Script" path="res://player_variables.gd" id="2_eo8oj"]
-[ext_resource type="PackedScene" path="res://scenes/killzone.tscn" id="3_5nmiw"]
+[ext_resource type="PackedScene" uid="uid://c8opbal4qikeb" path="res://scenes/killzone.tscn" id="3_5nmiw"]
 [ext_resource type="Texture2D" uid="uid://bv3ulsf111eft" path="res://icon.svg" id="4_2j4dn"]
 [ext_resource type="Texture2D" uid="uid://djmbc23ev35os" path="res://levels/TileSets/tilesheet_complete.png" id="5_hx2pj"]
 [ext_resource type="Texture2D" uid="uid://c6qo7utskjcra" path="res://levels/IntroLevel/straight_sand.png" id="6_3m4t1"]
