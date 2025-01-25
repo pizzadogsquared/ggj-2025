@@ -3270,9 +3270,6 @@ shape = SubResource("RectangleShape2D_pamt1")
 
 [node name="Player" parent="." instance=ExtResource("1_si7vq")]
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(576, 324)
-
 [node name="GameManager" type="Node" parent="."]
 unique_name_in_owner = true
 script = ExtResource("2_eo8oj")
