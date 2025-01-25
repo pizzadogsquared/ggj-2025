@@ -59,5 +59,7 @@ func _physics_process(delta: float) -> void:
 		velocity = motion
 	
 	velocity.x = motion.x
+	
+	print(global_position)
 
 	move_and_slide()
