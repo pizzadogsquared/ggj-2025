@@ -3259,8 +3259,8 @@ sources/9 = SubResource("TileSetAtlasSource_25wke")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tefvg"]
 size = Vector2(162.5, 30)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_mhenc"]
-size = Vector2(20, 71.5)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_244x4"]
+size = Vector2(20, 58)
 
 [node name="IntroLevel" type="Node2D"]
 
@@ -3293,9 +3293,9 @@ shape = SubResource("RectangleShape2D_tefvg")
 position = Vector2(828, 115)
 shape = SubResource("RectangleShape2D_tefvg")
 
-[node name="BoostWand" parent="." instance=ExtResource("10_s2lnw")]
-position = Vector2(2187, -5)
+[node name="BoostWand2" parent="." instance=ExtResource("10_s2lnw")]
+position = Vector2(1550, -102)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BoostWand"]
-position = Vector2(-3, 64)
-shape = SubResource("RectangleShape2D_mhenc")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BoostWand2"]
+position = Vector2(676, 170)
+shape = SubResource("RectangleShape2D_244x4")
