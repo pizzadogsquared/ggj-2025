@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://b8a651wnpvknq"
+=======
+uid="uid://6cufs7useaak"
+>>>>>>> 33a73930d78ce3a16752140a851b72df7fdfcb14
 path="res://.godot/imported/RightToLeftCurve.png-e2424927c32838ab5912a6b6768908f2.ctex"
 metadata={
 "vram_texture": false
