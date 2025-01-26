@@ -1,9 +1,88 @@
-[gd_scene load_steps=4 format=3 uid="uid://0t2le1o3ilay"]
+[gd_scene load_steps=13 format=3 uid="uid://0t2le1o3ilay"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_vh54j"]
-[ext_resource type="Texture2D" uid="uid://bv3ulsf111eft" path="res://icon.svg" id="2_ju5b3"]
+[ext_resource type="Texture2D" uid="uid://d1cwee7stgo58" path="res://sprites/pngs/shrimpspritesheet.png" id="2_y48cq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_l0man"]
+radius = 11.0
+
+[sub_resource type="Animation" id="Animation_r6jc5"]
+resource_name = "walk right"
+length = 0.25
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0333333, 0.0666667, 0.1, 0.133333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
+
+[sub_resource type="Animation" id="Animation_ec6pn"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_qkv03"]
+resource_name = "walkleft"
+length = 0.25
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(-1.11759e-08, 0.0333333, 0.0666667, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [6, 7, 8, 9, 9]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qqtqh"]
+_data = {
+"RESET": SubResource("Animation_ec6pn"),
+"walk right": SubResource("Animation_r6jc5"),
+"walkleft": SubResource("Animation_qkv03")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_vh7w3"]
+animation = &"walk right"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_tfumh"]
+animation = &"walkleft"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_sty0j"]
+animation = &"RESET"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_1t64m"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_vh7w3")
+blend_point_0/pos = Vector2(1, 0)
+blend_point_1/node = SubResource("AnimationNodeAnimation_tfumh")
+blend_point_1/pos = Vector2(-1, 0)
+blend_point_2/node = SubResource("AnimationNodeAnimation_sty0j")
+blend_point_2/pos = Vector2(0, 1)
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_07s40"]
+states/Start/position = Vector2(203, 299)
+states/Walking/node = SubResource("AnimationNodeBlendSpace2D_1t64m")
+states/Walking/position = Vector2(645, 309)
 
 [node name="Player" type="CharacterBody2D"]
 floor_stop_on_slope = false
@@ -13,12 +92,23 @@ script = ExtResource("1_vh54j")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_l0man")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.162109, 0.162109)
-texture = ExtResource("2_ju5b3")
-
 [node name="Camera2D" type="Camera2D" parent="."]
 offset = Vector2(0, -40)
 zoom = Vector2(2, 2)
 position_smoothing_enabled = true
 position_smoothing_speed = 4.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_y48cq")
+hframes = 12
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_qqtqh")
+}
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource("AnimationNodeStateMachine_07s40")
+advance_expression_base_node = NodePath("")
+anim_player = NodePath("../AnimationPlayer")
+parameters/Walking/blend_position = Vector2(0, 0.00306749)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=4 uid="uid://blwsgjh05o0mt"]
+[gd_scene load_steps=20 format=4 uid="uid://blwsgjh05o0mt"]
 
 [ext_resource type="PackedScene" uid="uid://0t2le1o3ilay" path="res://scenes/player.tscn" id="1_drejv"]
 [ext_resource type="Texture2D" uid="uid://djmbc23ev35os" path="res://levels/TileSets/tilesheet_complete.png" id="2_pj2gs"]
@@ -10,7 +10,6 @@
 [ext_resource type="Texture2D" uid="uid://dnhetqs52701w" path="res://levels/TileSets/aliSet/RightToLeftCurve.png" id="7_ina0a"]
 [ext_resource type="Texture2D" uid="uid://c6l3jlgjmk7sx" path="res://levels/TileSets/aliSet/sandTrap.png" id="8_kkeqw"]
 [ext_resource type="Script" path="res://player_variables.gd" id="9_1ygbk"]
-[ext_resource type="PackedScene" uid="uid://cu213ls30ulbv" path="res://scenes/boost_wand.tscn" id="10_s2lnw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vlglo"]
 texture = ExtResource("2_pj2gs")
@@ -3259,10 +3258,8 @@ sources/9 = SubResource("TileSetAtlasSource_25wke")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tefvg"]
 size = Vector2(162.5, 30)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_244x4"]
-size = Vector2(20, 58)
-
 [node name="IntroLevel" type="Node2D"]
+position = Vector2(-114, -55)
 
 [node name="Player" parent="." instance=ExtResource("1_drejv")]
 
@@ -3292,10 +3289,3 @@ shape = SubResource("RectangleShape2D_tefvg")
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="sand trap"]
 position = Vector2(828, 115)
 shape = SubResource("RectangleShape2D_tefvg")
-
-[node name="BoostWand2" parent="." instance=ExtResource("10_s2lnw")]
-position = Vector2(1550, -102)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BoostWand2"]
-position = Vector2(676, 170)
-shape = SubResource("RectangleShape2D_244x4")
