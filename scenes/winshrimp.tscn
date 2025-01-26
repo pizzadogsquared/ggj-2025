@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://domud3aitv3c1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4aqyq"]
+size = Vector2(25, 20)
+
+[node name="Winshrimp" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="winshrimpshape" type="CollisionShape2D" parent="."]
+position = Vector2(2.5, 0)
+shape = SubResource("RectangleShape2D_4aqyq")
