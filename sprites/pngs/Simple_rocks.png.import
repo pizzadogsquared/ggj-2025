@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cp5gt01xfjgrq"
-path="res://.godot/imported/sand_slant.png-7cc76b604482853b9588156641b6d309.ctex"
+uid="uid://cxgrusyd7u6ac"
+path="res://.godot/imported/Simple_rocks.png-fa71275417783cb63a390a61368dde83.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/pngs/sand_slant.png"
-dest_files=["res://.godot/imported/sand_slant.png-7cc76b604482853b9588156641b6d309.ctex"]
+source_file="res://sprites/pngs/Simple_rocks.png"
+dest_files=["res://.godot/imported/Simple_rocks.png-fa71275417783cb63a390a61368dde83.ctex"]
 
 [params]
 
