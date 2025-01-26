@@ -74,5 +74,7 @@ func _physics_process(delta: float) -> void:
 	else:
 		set_process_input(true)
 	
+	print(motion)
+	$AnimationTree.set("parameters/Walking/blend_position", motion)
 
 	move_and_slide()

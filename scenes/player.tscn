@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://0t2le1o3ilay"]
+[gd_scene load_steps=15 format=3 uid="uid://0t2le1o3ilay"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_vh54j"]
 [ext_resource type="Texture2D" uid="uid://d1cwee7stgo58" path="res://sprites/pngs/shrimpspritesheet.png" id="2_y48cq"]
@@ -89,17 +89,23 @@ animation = &"Idle"
 
 [sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_1t64m"]
 blend_point_0/node = SubResource("AnimationNodeAnimation_vh7w3")
-blend_point_0/pos = Vector2(1, 0)
+blend_point_0/pos = Vector2(300, 0)
 blend_point_1/node = SubResource("AnimationNodeAnimation_tfumh")
-blend_point_1/pos = Vector2(-1, 0)
+blend_point_1/pos = Vector2(-300, 0)
 blend_point_2/node = SubResource("AnimationNodeAnimation_sty0j")
 blend_point_2/pos = Vector2(0, 1)
+min_space = Vector2(-300, -1)
+max_space = Vector2(300, 1)
 blend_mode = 1
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_7utum"]
+advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_07s40"]
 states/Start/position = Vector2(203, 299)
 states/Walking/node = SubResource("AnimationNodeBlendSpace2D_1t64m")
-states/Walking/position = Vector2(645, 309)
+states/Walking/position = Vector2(501, 299)
+transitions = ["Start", "Walking", SubResource("AnimationNodeStateMachineTransition_7utum")]
 
 [node name="Player" type="CharacterBody2D"]
 floor_stop_on_slope = false
@@ -120,6 +126,7 @@ texture = ExtResource("2_y48cq")
 hframes = 12
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+deterministic = true
 libraries = {
 "": SubResource("AnimationLibrary_qqtqh")
 }
@@ -128,4 +135,4 @@ libraries = {
 tree_root = SubResource("AnimationNodeStateMachine_07s40")
 advance_expression_base_node = NodePath("")
 anim_player = NodePath("../AnimationPlayer")
-parameters/Walking/blend_position = Vector2(-0.738411, 0.101604)
+parameters/Walking/blend_position = Vector2(0, 0.0267379)
