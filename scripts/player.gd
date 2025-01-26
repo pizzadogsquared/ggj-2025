@@ -6,6 +6,7 @@ const ACC = 20.0
 const JUMP_VELOCITY = -400.0
 const MAX_BOOSTS = 1
 
+var has_boost_wand = false
 var motion = Vector2()
 var is_killed = false
 var boosts_used = 0
@@ -51,7 +52,7 @@ func _physics_process(delta: float) -> void:
 			if motion.x > 0:
 				motion.x = lerpf(motion.x, 0, 0.05)
 	
-	if Input.is_action_just_pressed("boost") and boosts_used < MAX_BOOSTS:
+	if Input.is_action_just_pressed("boost") and boosts_used < MAX_BOOSTS and has_boost_wand:
 		motion.x = -((get_local_mouse_position().x)) * SPEED * delta
 		motion.y = -((get_local_mouse_position().y)) * SPEED * delta
 		if motion.x > 500:
@@ -73,8 +74,7 @@ func _physics_process(delta: float) -> void:
 		velocity = Vector2.ZERO
 	else:
 		set_process_input(true)
-	
-	print(motion)
+
 	$AnimationTree.set("parameters/Walking/blend_position", motion)
 
 	move_and_slide()

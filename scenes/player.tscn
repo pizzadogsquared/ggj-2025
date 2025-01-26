@@ -89,9 +89,9 @@ animation = &"Idle"
 
 [sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_1t64m"]
 blend_point_0/node = SubResource("AnimationNodeAnimation_vh7w3")
-blend_point_0/pos = Vector2(300, 0)
+blend_point_0/pos = Vector2(1, 0)
 blend_point_1/node = SubResource("AnimationNodeAnimation_tfumh")
-blend_point_1/pos = Vector2(-300, 0)
+blend_point_1/pos = Vector2(-1, 0)
 blend_point_2/node = SubResource("AnimationNodeAnimation_sty0j")
 blend_point_2/pos = Vector2(0, 1)
 min_space = Vector2(-300, -1)
@@ -135,4 +135,4 @@ libraries = {
 tree_root = SubResource("AnimationNodeStateMachine_07s40")
 advance_expression_base_node = NodePath("")
 anim_player = NodePath("../AnimationPlayer")
-parameters/Walking/blend_position = Vector2(0, 0.0267379)
+parameters/Walking/blend_position = Vector2(-0.331116, 0.0374331)
