@@ -1,4 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://domud3aitv3c1"]
+[gd_scene load_steps=3 format=3 uid="uid://domud3aitv3c1"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_3r50p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4aqyq"]
 size = Vector2(25, 20)
@@ -6,6 +8,7 @@ size = Vector2(25, 20)
 [node name="Winshrimp" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("ImageTexture_3r50p")
 
 [node name="winshrimpshape" type="CollisionShape2D" parent="."]
 position = Vector2(2.5, 0)
