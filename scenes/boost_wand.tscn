@@ -1,8 +1,20 @@
-[gd_scene load_steps=2 format=3 uid="uid://cu213ls30ulbv"]
+[gd_scene load_steps=4 format=3 uid="uid://cu213ls30ulbv"]
 
 [ext_resource type="Script" path="res://scripts/boost_wand.gd" id="1_i76qa"]
+[ext_resource type="Texture2D" uid="uid://cr1w5qafjf673" path="res://levels/TileSets/aliSet/bubbleWand1.png" id="2_gkxxu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vtlch"]
+size = Vector2(20, 22)
 
 [node name="BoostWand" type="Area2D"]
+disable_mode = 2
 script = ExtResource("1_i76qa")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_gkxxu")
+
+[node name="WandShape" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_vtlch")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
