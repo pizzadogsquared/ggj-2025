@@ -1,4 +1,4 @@
-[gd_scene load_steps=155 format=4 uid="uid://blwsgjh05o0mt"]
+[gd_scene load_steps=156 format=4 uid="uid://blwsgjh05o0mt"]
 
 [ext_resource type="PackedScene" uid="uid://0t2le1o3ilay" path="res://scenes/player.tscn" id="1_drejv"]
 [ext_resource type="Texture2D" uid="uid://bt3oban5xrrff" path="res://levels/TileSets/aliSet/backgroundSandDune1.png" id="2_6cw6v"]
@@ -4957,6 +4957,9 @@ sources/7 = SubResource("TileSetAtlasSource_yl248")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tefvg"]
 size = Vector2(162.5, 30)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d2iwi"]
+size = Vector2(67, 13)
+
 [node name="IntroLevel" type="Node2D"]
 position = Vector2(-114, -55)
 
@@ -5026,3 +5029,24 @@ script = ExtResource("12_4vv6x")
 
 [node name="Winshrimp" parent="." instance=ExtResource("65_4qxdc")]
 position = Vector2(2109, -1164)
+
+[node name="sand trap5" parent="." instance=ExtResource("6_bht6w")]
+position = Vector2(2158, -672)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sand trap5"]
+position = Vector2(-142.5, 144)
+shape = SubResource("RectangleShape2D_d2iwi")
+
+[node name="sand trap6" parent="." instance=ExtResource("6_bht6w")]
+position = Vector2(2158, -672)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sand trap6"]
+position = Vector2(-270, 145)
+shape = SubResource("RectangleShape2D_d2iwi")
+
+[node name="sand trap7" parent="." instance=ExtResource("6_bht6w")]
+position = Vector2(2158, -672)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sand trap7"]
+position = Vector2(-398, 143)
+shape = SubResource("RectangleShape2D_d2iwi")
