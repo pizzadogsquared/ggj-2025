@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://5d28ski6g8b1"
-path="res://.godot/imported/sand_trap1.png-ba1d4d458e3c28e65e6d96b7230ef4e9.ctex"
+uid="uid://dgd46hg4xkggf"
+path="res://.godot/imported/poppingBubbles6.png-e83f48f986dc5f1c1d0d7217d44b06bb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/pngs/sand_trap1.png"
-dest_files=["res://.godot/imported/sand_trap1.png-ba1d4d458e3c28e65e6d96b7230ef4e9.ctex"]
+source_file="res://levels/TileSets/aliSet/poppingBubbles6.png"
+dest_files=["res://.godot/imported/poppingBubbles6.png-e83f48f986dc5f1c1d0d7217d44b06bb.ctex"]
 
 [params]
 

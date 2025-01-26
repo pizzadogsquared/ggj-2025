@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://5d28ski6g8b1"
-path="res://.godot/imported/sand_trap1.png-ba1d4d458e3c28e65e6d96b7230ef4e9.ctex"
+uid="uid://d4e0xb8ee6mni"
+path="res://.godot/imported/Simple_curved_rocks_and_yellow_fish1.png-c8304b8e58f09c981c61bcfa08ffe393.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/pngs/sand_trap1.png"
-dest_files=["res://.godot/imported/sand_trap1.png-ba1d4d458e3c28e65e6d96b7230ef4e9.ctex"]
+source_file="res://sprites/pngs/Simple_curved_rocks_and_yellow_fish1.png"
+dest_files=["res://.godot/imported/Simple_curved_rocks_and_yellow_fish1.png-c8304b8e58f09c981c61bcfa08ffe393.ctex"]
 
 [params]
 
