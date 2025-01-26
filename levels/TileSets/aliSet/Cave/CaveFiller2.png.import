@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bbww74gu3v31i"
-path="res://.godot/imported/straight_sand.png-560dbbad5bfceff9d98ab9f283f3b527.ctex"
+uid="uid://di1a8b7kq1m0j"
+path="res://.godot/imported/CaveFiller2.png-62603bebdf06dcbce640a4588e2bdca7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://levels/TileSets/aliSet/straight_sand.png"
-dest_files=["res://.godot/imported/straight_sand.png-560dbbad5bfceff9d98ab9f283f3b527.ctex"]
+source_file="res://levels/TileSets/aliSet/Cave/CaveFiller2.png"
+dest_files=["res://.godot/imported/CaveFiller2.png-62603bebdf06dcbce640a4588e2bdca7.ctex"]
 
 [params]
 

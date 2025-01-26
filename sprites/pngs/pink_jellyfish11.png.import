@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dxo0dioo3qp86"
-path="res://.godot/imported/BottomLayer2.png-4d95e9e2d2482620c4c77ebda267b9a3.ctex"
+uid="uid://dxb4mcjjd4li7"
+path="res://.godot/imported/pink_jellyfish11.png-a79a55dfbdcbec4dfd585a0d9682b809.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://levels/TileSets/aliSet/BottomLayer2.png"
-dest_files=["res://.godot/imported/BottomLayer2.png-4d95e9e2d2482620c4c77ebda267b9a3.ctex"]
+source_file="res://sprites/pngs/pink_jellyfish11.png"
+dest_files=["res://.godot/imported/pink_jellyfish11.png-a79a55dfbdcbec4dfd585a0d9682b809.ctex"]
 
 [params]
 

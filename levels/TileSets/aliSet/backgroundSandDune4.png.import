@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://6yfrxy5w6r4h"
-path="res://.godot/imported/TopLayerSand.png-bfdca473cf3b4e82ad1730ec6d71e442.ctex"
+uid="uid://djasw54ldt3ox"
+path="res://.godot/imported/backgroundSandDune4.png-1e6c774b28bf3c9f160be93693eb0e86.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://levels/TileSets/aliSet/TopLayerSand.png"
-dest_files=["res://.godot/imported/TopLayerSand.png-bfdca473cf3b4e82ad1730ec6d71e442.ctex"]
+source_file="res://levels/TileSets/aliSet/backgroundSandDune4.png"
+dest_files=["res://.godot/imported/backgroundSandDune4.png-1e6c774b28bf3c9f160be93693eb0e86.ctex"]
 
 [params]
 

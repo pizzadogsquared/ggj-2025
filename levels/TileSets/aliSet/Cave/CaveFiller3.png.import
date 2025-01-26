@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://df03flifm1ppw"
-path="res://.godot/imported/BottomLayer4.png-71d398b712ce9337f843577dfbe48928.ctex"
+uid="uid://e2lhreoxu8qh"
+path="res://.godot/imported/CaveFiller3.png-4d09475357c4f9e098b2897163c67a8e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://levels/TileSets/aliSet/BottomLayer4.png"
-dest_files=["res://.godot/imported/BottomLayer4.png-71d398b712ce9337f843577dfbe48928.ctex"]
+source_file="res://levels/TileSets/aliSet/Cave/CaveFiller3.png"
+dest_files=["res://.godot/imported/CaveFiller3.png-4d09475357c4f9e098b2897163c67a8e.ctex"]
 
 [params]
 
